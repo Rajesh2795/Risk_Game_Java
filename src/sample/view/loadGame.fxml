@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorderPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoadgameController">
+   <bottom>
+      <Pane fx:id="bottomPane" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: PaleTurquoise;" visible="true" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="finishedmoveButton" layoutX="763.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#finishedMove" style="-fx-background-color: DarkSeaGreen;" text="Finished Move">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" layoutX="899.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeGame" style="-fx-background-color: DarkSeaGreen;" text="Close">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="attackButton" layoutX="390.0" layoutY="10.0" mnemonicParsing="false" onAction="#attackPhase" style="-fx-background-color: DarkSeaGreen; -fx-border-color: Black;" text="Attack" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="fortifyButton" layoutX="468.0" layoutY="10.0" mnemonicParsing="false" onAction="#fortifyButtonAction" style="-fx-background-color: DarkSeaGreen; -fx-border-color: Black;" text="Fortify" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="loadCardExchangeButton" focusTraversable="false" layoutX="325.0" layoutY="11.0" mnemonicParsing="false" onAction="#loadCardsExchangeView" style="-fx-background-color: DarkSeaGreen;" text="Load Cards Exchange " visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="skipButton" layoutX="519.0" layoutY="11.0" mnemonicParsing="false" onAction="#skipToNextPhase" style="-fx-background-color: DarkSeaGreen;" text="Skip" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="fortifyLabel" layoutX="14.0" layoutY="15.0" text="Select the country from where you want to move " visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fortifyTextField" editable="false" layoutX="365.0" layoutY="11.0" prefHeight="31.0" prefWidth="189.0" visible="false" />
+            <Button fx:id="proceedButton" layoutX="676.0" layoutY="10.0" mnemonicParsing="false" onAction="#proceedAction" style="-fx-background-color: DarkSeaGreen; -fx-border-color: Black;" text="Proceed" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="armiesCountLabel" layoutX="562.0" layoutY="16.0" text="Armies" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="armiesCountTextField" layoutX="618.0" layoutY="11.0" prefHeight="31.0" prefWidth="49.0" style="-fx-border-color: Black;" text="0" visible="false" />
+            <Label fx:id="attackLabel" layoutX="14.0" layoutY="15.0" prefHeight="21.0" prefWidth="125.0" text="Attacker Country" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="attackTextField" editable="false" layoutX="139.0" layoutY="10.0" visible="false" />
+            <Label fx:id="diceLabel" layoutX="335.0" layoutY="15.0" text="Dice" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="attackProceedButton" layoutX="679.0" layoutY="10.0" mnemonicParsing="false" onAction="#attackProceedButtonAction" style="-fx-background-color: DarkSeaGreen;" text="Proceed" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="diceTextField" layoutX="389.0" layoutY="10.0" prefHeight="31.0" prefWidth="45.0" visible="false" />
+            <Button fx:id="allButton" layoutX="505.0" layoutY="11.0" mnemonicParsing="false" onAction="#allButtonAction" style="-fx-background-color: DarkSeaGreen;" text="All" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="armiesToMoveLabel" layoutX="28.0" layoutY="15.0" text="No of Armies you want to move" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="armiesToMoveTextField" layoutX="262.0" layoutY="10.0" prefHeight="31.0" prefWidth="48.0" visible="false" />
+            <Button fx:id="confirmButton" layoutX="667.0" layoutY="11.0" mnemonicParsing="false" onAction="#getTheNoOfArmiesToMoveFromPlayerAfterWinningTerritory" style="-fx-background-color: DarkSeaGreen; -fx-border-color: Black;" text="Confirm" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="saveGameButton" layoutX="700.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveTheGame" style="-fx-background-color: DarkSeaGreen;" text="Save" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </bottom>
+   <center>
+      <Pane fx:id="centerPane" prefHeight="495.0" prefWidth="800.0" style="-fx-background-color: Honeydew;" BorderPane.alignment="CENTER">
+         <children>
+           <Canvas fx:id="canvasId" height="419.0" layoutX="1.0" layoutY="-1.0" width="800.0" />
+             <Pane fx:id="canvasPane" layoutX="1.0" layoutY="-1.0" prefHeight="419.0" prefWidth="800.0" />
+            <TextField fx:id="armiesPlayer1" disable="true" editable="false" layoutX="268.0" layoutY="525.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Blue; -fx-text-fill: White; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="cardsPlayer1" disable="true" editable="false" layoutX="321.0" layoutY="525.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Blue; -fx-text-fill: White; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="armiesPlayer2" disable="true" editable="false" layoutX="268.0" layoutY="565.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Green; -fx-text-fill: White; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="cardsPlayer2" disable="true" editable="false" layoutX="322.0" layoutY="565.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Green; -fx-text-fill: White; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="armiesPlayer3" disable="true" editable="false" layoutX="269.0" layoutY="605.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: DeepPink; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="cardsPlayer3" disable="true" editable="false" layoutX="321.0" layoutY="605.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: DeepPink; -fx-border-color: Black;" text="0" visible="false" />
+            <Label fx:id="labelPlayer1" disable="true" layoutX="366.0" layoutY="530.0" text="Player1" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPlayer2" disable="true" layoutX="366.0" layoutY="570.0" text="Player2" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPlayer3" disable="true" layoutX="366.0" layoutY="608.0" text="Player3" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="armiesPlayer4" disable="true" editable="false" layoutX="480.0" layoutY="528.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Red; -fx-text-fill: Black; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="cardsPlayer4" disable="true" editable="false" layoutX="529.0" layoutY="528.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Red; -fx-text-fill: Black; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="armiesPlayer5" disable="true" editable="false" layoutX="480.0" layoutY="568.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Aqua; -fx-text-fill: Black; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="cardsPlayer5" disable="true" editable="false" layoutX="529.0" layoutY="568.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Aqua; -fx-text-fill: Black; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="armiesPlayer6" disable="true" editable="false" layoutX="480.0" layoutY="606.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Orange; -fx-text-fill: Black; -fx-border-color: Black;" text="0" visible="false" />
+            <TextField fx:id="cardsPlayer6" disable="true" editable="false" layoutX="529.0" layoutY="606.0" prefHeight="31.0" prefWidth="40.0" style="-fx-background-color: Orange; -fx-text-fill: Black; -fx-border-color: Black;" text="0" visible="false" />
+            <Label fx:id="labelPlayer4" disable="true" layoutX="576.0" layoutY="534.0" text="Player4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPlayer5" disable="true" layoutX="576.0" layoutY="571.0" text="Player5" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelPlayer6" disable="true" layoutX="576.0" layoutY="609.0" text="Player6" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </center>
+</BorderPane>

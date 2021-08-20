@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: LightGray;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.PhaseViewController">
+   <children>
+      <Label layoutX="352.0" layoutY="34.0" text="Phase View">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="phaseViewTextArea" editable="false" layoutX="62.0" layoutY="86.0" prefHeight="561.0" prefWidth="679.0" wrapText="true" />
+   </children>
+</AnchorPane>

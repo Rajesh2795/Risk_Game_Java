@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<!--
+   This sample.fxml will display the main user interface to select options such as map editor, new game and
+   new map.
+-->
+
+<BorderPane fx:id="MainBorderPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="sample.controller.Controller">
+    <top>
+        <MenuBar fx:id="menubarId">
+            <Menu text="New" fx:id="newMenuId">
+                <items>
+                    <MenuItem onAction="#startGame" text="New Game" />
+                    <SeparatorMenuItem />
+                    <MenuItem text="Tournament Mode" onAction="#tournamentMode"/>
+                    <SeparatorMenuItem />
+                    <MenuItem text="Load Game" onAction="#loadsavedgame" fx:id="loadGameMenu" />
+                    <SeparatorMenuItem />
+                    <MenuItem text="Exit" onAction="#exitApplication"/>
+                </items>
+            </Menu>
+            <Menu text="Map">
+                <items>
+                    <MenuItem onAction="#editMap" text="Edit Map" />
+                    <SeparatorMenuItem />
+                    <MenuItem onAction="#constructNewmap" text="New Map" />
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane prefHeight="682.0" prefWidth="912.0">
+         <children>
+            <Canvas fx:id="canvasId" height="682.0" layoutY="-1.0" width="912.0" />
+         </children></Pane>
+    </center>
+</BorderPane>

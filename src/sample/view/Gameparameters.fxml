@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Integer?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<DialogPane fx:id="gameSettingsdialog" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.GameparametersDialogController">
+    <header>
+        <Label text="Game settings" alignment="TOP_CENTER" style="-fx-font-size: 20"></Label>
+    </header>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label alignment="TOP_CENTER" text="Number of Players" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            </Label>
+            <ComboBox fx:id="NumberofPlayers" GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#getNumberofPlayers">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="2" />
+                        <String fx:value="3" />
+                        <String fx:value="4" />
+                        <String fx:value="5" />
+                        <String fx:value="6" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Player-1" GridPane.rowIndex="4" GridPane.columnIndex="0" visible="false" fx:id="labelPlayer1"/>
+            <ComboBox fx:id="player1" GridPane.rowIndex="4" GridPane.columnIndex="1" visible="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="HUMAN"/>
+                        <String fx:value="AGGRESSIVE"/>
+                        <String fx:value="BENEVOLENT"/>
+                        <String fx:value="RANDOM"/>
+                        <String fx:value="CHEATER"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Player-2" GridPane.rowIndex="4" GridPane.columnIndex="2" visible="false" fx:id="labelPlayer2"/>
+            <ComboBox fx:id="player2" GridPane.rowIndex="4" GridPane.columnIndex="3" visible="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="HUMAN"/>
+                        <String fx:value="AGGRESSIVE"/>
+                        <String fx:value="BENEVOLENT"/>
+                        <String fx:value="RANDOM"/>
+                        <String fx:value="CHEATER"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Player-3" GridPane.rowIndex="5" GridPane.columnIndex="0" visible="false" fx:id="labelPlayer3"/>
+            <ComboBox fx:id="player3" GridPane.rowIndex="5" GridPane.columnIndex="1" visible="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="HUMAN"/>
+                        <String fx:value="AGGRESSIVE"/>
+                        <String fx:value="BENEVOLENT"/>
+                        <String fx:value="RANDOM"/>
+                        <String fx:value="CHEATER"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Player-4" GridPane.rowIndex="5" GridPane.columnIndex="2" visible="false" fx:id="labelPlayer4"/>
+            <ComboBox fx:id="player4" GridPane.rowIndex="5" GridPane.columnIndex="3" visible="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="HUMAN"/>
+                        <String fx:value="AGGRESSIVE"/>
+                        <String fx:value="BENEVOLENT"/>
+                        <String fx:value="RANDOM"/>
+                        <String fx:value="CHEATER"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Player-5" GridPane.rowIndex="6" GridPane.columnIndex="0" visible="false" fx:id="labelPlayer5"/>
+            <ComboBox fx:id="player5" GridPane.rowIndex="6" GridPane.columnIndex="1" visible="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="HUMAN"/>
+                        <String fx:value="AGGRESSIVE"/>
+                        <String fx:value="BENEVOLENT"/>
+                        <String fx:value="RANDOM"/>
+                        <String fx:value="CHEATER"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Player-6" GridPane.rowIndex="6" GridPane.columnIndex="2" visible="false" fx:id="labelPlayer6"/>
+            <ComboBox fx:id="player6" GridPane.rowIndex="6" GridPane.columnIndex="3" visible="false">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="HUMAN"/>
+                        <String fx:value="AGGRESSIVE"/>
+                        <String fx:value="BENEVOLENT"/>
+                        <String fx:value="RANDOM"/>
+                        <String fx:value="CHEATER"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Load Map" GridPane.rowIndex="10" GridPane.columnIndex="0" visible="false" fx:id="mapLabel"/>
+            <Button text="Choose map" GridPane.rowIndex="10" GridPane.columnIndex="1" visible="false" fx:id="chooseMapbutton" onAction="#chooseMap"/>
+        </GridPane>
+    </content>
+</DialogPane>
